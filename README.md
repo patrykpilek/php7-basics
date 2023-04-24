@@ -9,7 +9,7 @@ $php -S localhost:8080 public/index.php
 - [x] Class Fields and Methods
 - [x] Method and Field Visibility
 - [x] Inheritance
-- [ ] Abstract Classes
+- [x] Abstract Classes
 - [ ] Interfaces
 - [ ] Typed Arguments and Function Return Types
 - [ ] Anonymous Functions (Closures)
