@@ -8,7 +8,7 @@ $php -S localhost:8080 public/index.php
 - [x] Namespaces
 - [x] Class Fields and Methods
 - [x] Method and Field Visibility
-- [ ] Inheritance
+- [x] Inheritance
 - [ ] Abstract Classes
 - [ ] Interfaces
 - [ ] Typed Arguments and Function Return Types
