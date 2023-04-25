@@ -10,29 +10,30 @@ use App\Format\FromStringInterface;
 use App\Format\BaseFormat;
 use App\Format\NamedFormatInterface;
 
-print_r("Anonymous functions\n\n");
+print_r("Reflections\n\n");
 
 $data = [
     "name" => "John",
     "surname" => "Doe"
 ];
 
-$formats = [
-    new JSON($data),
-    new XML($data),
-    new YAML($data)
-];
+// $formats = [
+//     new JSON($data),
+//     new XML($data),
+//     new YAML($data)
+// ];
 
-function findByName(string $name, array $formats): ?BaseFormat {
-    $found = array_filter($formats, function ($format) use ($name) {
-        return $format->getName() === $name;
-    });
+$class = new ReflectionClass(JSON::class);
+var_dump($class);
+$method = $class->getConstructor();
+var_dump($method);
+$parameters = $method->getParameters();
+var_dump($parameters);
 
-    if( count($found)) {
-        return reset($found);
-    }
-
-    return null;
+foreach ($parameters as $parameter) {
+    $type = $parameter->getType();
+    var_dump((string)$type);
+    var_dump($type->isBuiltin());
+    var_dump($parameter->allowsNull());
+    var_dump($parameter->getDefaultValue());
 }
-
-var_dump(findByName('NonExisting', $formats));
