@@ -14,8 +14,8 @@ class XML extends BaseFormat {
         return htmlspecialchars($result);
     }
 
-    // public function getName() 
-    // {
-    //     return 'XML';
-    // }
+    public function getName(): string 
+    {
+        return 'XML';
+    }
 }
