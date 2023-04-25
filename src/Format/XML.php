@@ -2,8 +2,8 @@
 
 namespace App\Format;
 
-class XML extends BaseFormat {
-    public function convert()
+class XML extends BaseFormat implements NamedFormatInterface, FormatInterface {
+    public function convert(): string
     {
         $result = '';
 

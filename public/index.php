@@ -10,30 +10,20 @@ use App\Format\FromStringInterface;
 use App\Format\BaseFormat;
 use App\Format\NamedFormatInterface;
 
-print_r("Reflections\n\n");
+use App\Serializer;
+
+print_r("Dependency Injection\n\n");
 
 $data = [
     "name" => "John",
     "surname" => "Doe"
 ];
 
+$serializer = new Serializer(new XML());
+var_dump($serializer->serialize($data));
+
 // $formats = [
-//     new JSON($data),
-//     new XML($data),
-//     new YAML($data)
+//     new JSON(),
+//     new XML(),
+//     new YAML()
 // ];
-
-$class = new ReflectionClass(JSON::class);
-var_dump($class);
-$method = $class->getConstructor();
-var_dump($method);
-$parameters = $method->getParameters();
-var_dump($parameters);
-
-foreach ($parameters as $parameter) {
-    $type = $parameter->getType();
-    var_dump((string)$type);
-    var_dump($type->isBuiltin());
-    var_dump($parameter->allowsNull());
-    var_dump($parameter->getDefaultValue());
-}

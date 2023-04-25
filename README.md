@@ -14,7 +14,7 @@ $php -S localhost:8080 public/index.php
 - [x] Typed Arguments and Function Return Types
 - [x] Anonymous Functions (Closures)
 - [x] Reflection API (Reverse-Engineer Classes, Methods, Functions)
-- [ ] Dependency Injection (In Practice)
+- [x] Dependency Injection (In Practice)
 - [ ] Simple Service Container (Hands-On Coding!)
 - [ ] Service Autowiring Implementation Part 1
 - [ ] Service Autowiring Implementation Part 2
