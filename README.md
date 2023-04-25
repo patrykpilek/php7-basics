@@ -11,7 +11,7 @@ $php -S localhost:8080 public/index.php
 - [x] Inheritance
 - [x] Abstract Classes
 - [x] Interfaces
-- [ ] Typed Arguments and Function Return Types
+- [x] Typed Arguments and Function Return Types
 - [ ] Anonymous Functions (Closures)
 - [ ] Reflection API (Reverse-Engineer Classes, Methods, Functions)
 - [ ] Dependency Injection (In Practice)
