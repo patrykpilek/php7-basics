@@ -8,4 +8,4 @@ use App\Kernel;
 // print_r("Annotations\n\n");
 
 $kernel = (new Kernel())->boot();
-$container = $kernel->getContainer();
+$kernel->handleRequest();

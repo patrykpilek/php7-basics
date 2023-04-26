@@ -19,4 +19,4 @@ $php -S localhost:8080 public/index.php
 - [x] Service Autowiring Implementation Part 1
 - [x] Service Autowiring Implementation Part 2
 - [x] Annotations and Kernel Part 1
-- [ ] Annotations and Kernel Part 2
+- [x] Annotations and Kernel Part 2
