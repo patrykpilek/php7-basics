@@ -12,6 +12,7 @@
         }
     ],
     "require": {
-        "ext-json": "*"
+        "ext-json": "*",
+        "doctrine/annotations": "^2.0"
     }
 }
