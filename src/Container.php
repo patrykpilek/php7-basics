@@ -75,10 +75,10 @@ class Container {
         });
 
         foreach($files as $file) {
-            $class = new \ReflectionClass(
-                $namespace . '\\' . basename($file, '.php')
-            );
+            $class = new \ReflectionClass($namespace . '\\' . basename($file, '.php'));
             $serviceName = $class->getName();
+
+//            var_dump($serviceName);
 
             $constructor = $class->getConstructor();
             $arguments = $constructor->getParameters();
@@ -88,14 +88,14 @@ class Container {
 
             foreach ($arguments as $argument) {
                 $type = (string)$argument->getType();
-                
+
+//                var_dump($type);
+//
                 if ($this->hasService($type) || $this->hasAlias($type)) {
-                    $serviceParameters[] = $this->getService($type) 
-                        ?? $this->getAlias($type);
+                    $serviceParameters[] = $this->getService($type) ?? $this->getAlias($type);
                 } else {
                     $serviceParameters[] = function() use ($type) {
-                        return $this->getService($type) 
-                            ?? $this->getAlias($type);
+                        return $this->getService($type) ?? $this->getAlias($type);
                     };
                 }
             }
